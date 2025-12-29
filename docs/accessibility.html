@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrierefreiheit | FitTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Hauptnavigation">
+            <div class="logo"><strong>FitTrack</strong></div>
+            <ul>
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="about.html">Marke</a></li>
+                <li><a href="license.html">Lizenzen</a></li>
+                <li><a href="legal.html">Rechtliches</a></li>
+                <li><button id="theme-toggle" aria-label="Farbschema umschalten">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article class="glass-card" style="text-align: left;">
+            <h1>Barrierefreiheitserklärung</h1>
+            <p>Die <strong>FitFlow Solutions OG</strong> ist bemüht, ihre Website im Einklang mit den Richtlinien für Barrierefreiheit (WCAG 2.2 auf Level AA) zugänglich zu machen.</p>
+            
+            <hr>
+
+            <h2>Stand der Vereinbarkeit</h2>
+            <p>Diese Website ist mit den Kriterien der <strong>WCAG 2.2 AA</strong> weitestgehend vereinbar. Wir betrachten Barrierefreiheit nicht als Sonderlösung, sondern als inklusiven Standard.</p>
+
+            <h2>Umgesetzte Maßnahmen</h2>
+            <p>Basierend auf den Dimensionen der Barrierefreiheit haben wir folgende Funktionen implementiert:</p>
+            <ul>
+                <li><strong>Visuell:</strong> 
+                    <ul>
+                        <li>Ein integrierter <strong>Dark Mode</strong> zur Unterstützung bei Lichtempfindlichkeit (situative Einschränkung).</li>
+                        <li>Hohe Kontrastverhältnisse (geprüft mit dem Contrast Checker) von mindestens 4,5:1.</li>
+                        <li>Skalierbarkeit: Die Seite unterstützt Zoom bis 200% ohne Funktionsverlust.</li>
+                    </ul>
+                </li>
+                <li><strong>Motorisch & Bedienbarkeit:</strong>
+                    <ul>
+                        <li>Volle Tastaturbedienbarkeit mit deutlich sichtbarem Fokus-Stil (Focus-Visible).</li>
+                        <li>Verzicht auf zeitgesteuerte Inhalte oder blinkende Elemente.</li>
+                    </ul>
+                </li>
+                <li><strong>Auditiv & Kognitiv:</strong>
+                    <ul>
+                        <li>Verwendung von einfacher Sprache und klarer Navigationsstruktur.</li>
+                        <li>Semantisches HTML für eine fehlerfreie Interpretation durch Screenreader (NVDA, VoiceOver).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Prüfungsmethodik</h2>
+            <p>Die Barrierefreiheit wurde mit folgenden Tools getestet:</p>
+            <ul>
+                <li>WAVE (Web Accessibility Evaluation Tool)</li>
+                <li>axe DevTools</li>
+                <li>Manueller Tastatur-Check (Tab-Navigation)</li>
+            </ul>
+
+            <h2>Feedback und Kontakt</h2>
+            <p>Sollten Ihnen Barrieren auffallen, freuen wir uns über Ihre Rückmeldung an:</p>
+            <p><strong>E-Mail:</strong> accessibility@fittrack.at</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitFlow Solutions OG | Wien</p>
+        <nav aria-label="Footer Navigation">
+            <a href="legal.html">Impressum</a> | <a href="index.html">Zurück zum Shop</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

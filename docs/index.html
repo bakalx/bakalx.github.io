@@ -7,49 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav aria-label="Hauptnavigation">
+            <div class="logo"><strong>FitTrack</strong></div>
+            <ul>
+                <li><a href="index.html" aria-current="page">Shop</a></li>
+                <li><a href="about.html">Marke</a></li>
+                <li><a href="license.html">Lizenzen</a></li>
+                <li><a href="legal.html">Rechtliches</a></li>
+                <li><button id="theme-toggle" aria-label="Farbschema umschalten">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <nav>
-        <div class="logo"><strong>FitTrack</strong></div>
-        <a href="index.html">Shop</a>
-        <a href="about.html">Marke</a>
-        <a href="license.html">Credits</a>
-        <a href="legal.html">Recht</a>
-        <button id="theme-toggle" aria-label="Modus wechseln">🌙</button>
-    </nav>
-</header>
+    <section class="hero">
+        <h1>FitTrack AI</h1>
+        <p>Die Zukunft des Home-Workouts. Präzise. Motivierend. Sicher.</p>
+    </section>
 
-<section class="hero">
-    <h1>FitTrack AI</h1>
-    <p>Die Zukunft des Home-Workouts. Präzise. Motivierend. Sicher.</p>
-</section>
+    <main class="container">
+        <article class="glass-card">
+            <img src="https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=500&q=80" 
+                 alt="Vorschau der FitTrack App Oberfläche auf einem Tablet">
+            <h2>Premium Lifetime</h2>
+            <p>Einmal kaufen, für immer fit bleiben. Inklusive aller KI-Pläne.</p>
+            <span class="price-tag">€ 29,99</span>
+            <button class="buy-button" onclick="alert('Mockup: Kauf erfolgreich!')">Jetzt starten</button>
+        </article>
 
-<main class="container">
-    <article class="glass-card">
-        <img src="https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=500&q=80" 
-             alt="Vorschau der FitTrack App Oberfläche auf einem Tablet">
-        <h2>Premium Lifetime</h2>
-        <p>Einmal kaufen, für immer fit bleiben. Inklusive aller KI-Pläne.</p>
-        <span class="price-tag">€ 29,99</span>
-        <button class="buy-button">Jetzt starten</button>
-    </article>
+        <article class="glass-card">
+            <h2>Deine Vorteile</h2>
+            <ul class="feature-list">
+                <li>✓ <strong>Barrierefrei:</strong> WCAG 2.2 AA konform</li>
+                <li>✓ <strong>Sicher:</strong> DSGVO-konforme Datenhaltung</li>
+                <li>✓ <strong>Fair:</strong> Lizenzierung statt Abo-Falle</li>
+            </ul>
+        </article>
+    </main>
 
-    <article class="glass-card">
-        <h2>Warum FitTrack?</h2>
-        <p>Unsere Software nutzt modernste Algorithmen, um dein Training zu optimieren – ganz ohne teure Geräte.</p>
-        <ul style="text-align: left; color: var(--text-secondary);">
-            <li>✓ WCAG 2.2 AA konform</li>
-            <li>✓ DSGVO-sicher (Daten bleiben lokal)</li>
-            <li>✓ § 40a UrhG konforme Lizenzierung</li>
-        </ul>
-    </article>
-</main>
+    <footer>
+        <p>&copy; 2024 FitFlow Solutions OG | Wien</p>
+        <nav aria-label="Footer Navigation">
+            <a href="legal.html">Impressum</a> | <a href="accessibility.html">Barrierefreiheit</a>
+        </nav>
+    </footer>
 
-<footer style="text-align: center; padding: 4rem 1rem; color: var(--text-secondary);">
-    <p>&copy; 2024 FitFlow Solutions OG | Wien</p>
-    <a href="legal.html" style="color: var(--accent);">Impressum & Datenschutz</a>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

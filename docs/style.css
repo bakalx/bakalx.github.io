@@ -1,83 +1,49 @@
-/* Basis-Setup */
+/* Globale Barrierefreiheit */
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #1a1a1a; /* Dunkler Text für Kontrast */
-    background-color: #f4f9f4; /* Ganz helles Grün */
+    font-family: 'Roboto', sans-serif;
+    color: #212121; /* Hoher Kontrast auf Weiß */
+    background-color: #ffffff;
+    line-height: 1.8;
     margin: 0;
-    padding: 0;
 }
 
-/* Barrierefreiheit: Fokus-Stil für Tastaturnutzer */
+/* Sichtbarer Tastatur-Fokus (Slide 45) */
 a:focus, button:focus {
-    outline: 3px solid #2e7d32;
-    outline-offset: 4px;
+    outline: 5px solid #FF5722;
+    outline-offset: 3px;
 }
 
 header {
-    background-color: #2e7d32; /* Dunkelgrün */
+    background-color: #1a237e; /* Dunkelblau */
     color: white;
     padding: 2rem;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+nav ul { list-style: none; padding: 0; }
+nav li { display: inline; margin: 0 1rem; }
+nav a { color: white; text-decoration: none; font-weight: bold; }
 
 .product-card {
-    border: 2px solid #2e7d32;
+    border: 3px solid #1a237e;
+    max-width: 500px;
+    margin: 3rem auto;
     padding: 2rem;
     text-align: center;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
-.product-card img {
-    max-width: 100%;
-    border-radius: 8px;
-}
+.product-card img { width: 100%; border-radius: 5px; }
 
 button {
-    background-color: #2e7d32;
+    background-color: #FF5722; /* Markenfarbe */
     color: white;
     padding: 1rem 2rem;
     border: none;
+    font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #1b5e20;
-}
-
-footer {
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-}
+table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+th, td { border: 1px solid #333; padding: 10px; text-align: left; }

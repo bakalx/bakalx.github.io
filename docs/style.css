@@ -1,49 +1,99 @@
-/* Globale Barrierefreiheit */
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #212121; /* Hoher Kontrast auf Weiß */
-    background-color: #ffffff;
-    line-height: 1.8;
-    margin: 0;
+/* 1. Variablen definieren */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1b;
+    --header-bg: #1a237e;
+    --header-text: #ffffff;
+    --accent-color: #ff5722;
+    --card-bg: #f8f9fa;
+    --border-color: #e0e0e0;
 }
 
-/* Sichtbarer Tastatur-Fokus (Slide 45) */
-a:focus, button:focus {
-    outline: 5px solid #FF5722;
-    outline-offset: 3px;
+/* 2. Dark Mode Variablen */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #0d124a;
+    --header-text: #ffffff;
+    --accent-color: #ff7043;
+    --card-bg: #1e1e1e;
+    --border-color: #333333;
+}
+
+/* 3. Globales Design */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Sanfter Übergang */
+    margin: 0;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #1a237e; /* Dunkelblau */
-    color: white;
-    padding: 2rem;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 3rem 1rem;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-nav ul { list-style: none; padding: 0; }
-nav li { display: inline; margin: 0 1rem; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
+/* Barrierefreier Fokus (Slide 45) */
+a:focus, button:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 4px;
+}
 
+/* Karten-Design (moderner & schöner) */
 .product-card {
-    border: 3px solid #1a237e;
-    max-width: 500px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    max-width: 450px;
     margin: 3rem auto;
-    padding: 2rem;
+    padding: 2.5rem;
+    border-radius: 20px;
     text-align: center;
-    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.product-card img { width: 100%; border-radius: 5px; }
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
 
-button {
-    background-color: #FF5722; /* Markenfarbe */
+button#theme-toggle {
+    background: transparent;
+    border: 2px solid white;
     color: white;
-    padding: 1rem 2rem;
-    border: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+    padding: 5px 10px;
     cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
 }
 
-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
-th, td { border: 1px solid #333; padding: 10px; text-align: left; }
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+button.buy-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button.buy-btn:hover {
+    transform: scale(1.05);
+}
+
+[data-theme="dark"] img {
+    filter: brightness(0.8) contrast(1.1);
+}

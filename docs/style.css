@@ -1,85 +1,121 @@
-/* 1. Variablen definieren */
+/* DESIGN SYSTEM & VARIABLEN */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1b;
-    --header-bg: #1a237e;
-    --header-text: #ffffff;
-    --accent-color: #ff5722;
-    --card-bg: #f8f9fa;
-    --border-color: #e0e0e0;
+    /* Light Mode Palette */
+    --bg-main: #f0f2f5;
+    --bg-card: rgba(255, 255, 255, 0.8);
+    --text-primary: #1c1e21;
+    --text-secondary: #4b4f56;
+    --accent: #ff5722; /* Power Orange */
+    --accent-hover: #e64a19;
+    --nav-bg: #1a237e; /* Deep Navy */
+    --nav-text: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
 }
 
-/* 2. Dark Mode Variablen */
 [data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --header-bg: #0d124a;
-    --header-text: #ffffff;
-    --accent-color: #ff7043;
-    --card-bg: #1e1e1e;
-    --border-color: #333333;
+    /* Dark Mode Palette */
+    --bg-main: #0f172a;
+    --bg-card: rgba(30, 41, 59, 0.7);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --nav-bg: #020617;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
-/* 3. Globales Design */
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s; /* Sanfter Übergang */
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     margin: 0;
     line-height: 1.6;
 }
 
+/* BARRIEREFREIE NAVIGATION */
 header {
-    background-color: var(--header-bg);
-    color: var(--header-text);
-    padding: 3rem 1rem;
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+nav a:hover, a:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid var(--accent); /* Fokus-Stil Slide 45 */
+}
+
+/* HERO SECTION */
+.hero {
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 5rem 1rem;
+    background: linear-gradient(135deg, var(--nav-bg), #3f51b5);
+    color: white;
+    clip-path: ellipse(150% 100% at 50% 0%);
 }
 
-/* Barrierefreier Fokus (Slide 45) */
-a:focus, button:focus {
-    outline: 3px solid var(--accent-color);
-    outline-offset: 4px;
+.hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+
+/* PRODUKT-KARTEN (GLASSMORPHISM) */
+.container {
+    max-width: 1200px;
+    margin: -3rem auto 3rem;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-/* Karten-Design (moderner & schöner) */
-.product-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    max-width: 450px;
-    margin: 3rem auto;
-    padding: 2.5rem;
-    border-radius: 20px;
+.glass-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.product-card img {
+.glass-card img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 16px;
     margin-bottom: 1.5rem;
 }
 
-button#theme-toggle {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.2rem;
+.price-tag {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+    margin: 1rem 0;
 }
 
-.price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent-color);
-}
-
-button.buy-btn {
-    background-color: var(--accent-color);
+.buy-button {
+    background-color: var(--accent);
     color: white;
     border: none;
     padding: 1rem 2.5rem;
@@ -87,13 +123,24 @@ button.buy-btn {
     font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
-    transition: transform 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
 }
 
-button.buy-btn:hover {
-    transform: scale(1.05);
+.buy-button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
 }
 
-[data-theme="dark"] img {
-    filter: brightness(0.8) contrast(1.1);
+/* THEME TOGGLE */
+#theme-toggle {
+    background: var(--accent);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

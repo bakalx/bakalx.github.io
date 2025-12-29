@@ -1,23 +1,16 @@
-const toggleBtn = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const currentTheme = localStorage.getItem('theme');
+const btn = document.getElementById('theme-toggle');
+const html = document.documentElement;
 
-// Beim Laden prüfen, ob schon ein Thema gespeichert ist
-if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    themeIcon.textContent = '☀️';
-}
+// Präferenz beim Laden prüfen
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+btn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
-toggleBtn.addEventListener('click', () => {
-    let theme = document.documentElement.getAttribute('data-theme');
+btn.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     
-    if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        themeIcon.textContent = '🌙';
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        themeIcon.textContent = '☀️';
-    }
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    btn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
 });

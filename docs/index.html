@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <nav aria-label="Hauptnavigation">
-            <div class="logo"><strong>FitTrack</strong></div>
-            <ul>
-                <li><a href="index.html" aria-current="page">Shop</a></li>
-                <li><a href="about.html">Marke</a></li>
-                <li><a href="license.html">Lizenzen</a></li>
-                <li><a href="legal.html">Rechtliches</a></li>
-                <li><button id="theme-toggle" aria-label="Farbschema umschalten">🌙</button></li>
+        <nav class="main-nav" aria-label="Hauptnavigation">
+            <a class="skip-link" href="#main">Skip to content</a>
+
+            <a class="nav-brand" href="index.html"><strong>FitTrack</strong></a>
+
+            <ul id="main-nav-list" class="nav-list" role="menubar">
+                <li role="none"><a role="menuitem" href="index.html" aria-current="page">Shop</a></li>
+                <li role="none"><a role="menuitem" href="about.html">Marke</a></li>
+                <li role="none"><a role="menuitem" href="license.html">Lizenzen</a></li>
+                <li role="none"><a role="menuitem" href="legal.html">Rechtliches</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false" class="icon-btn">🌙</button>
+            </div>
         </nav>
     </header>
 
@@ -25,7 +32,7 @@
         <p>Die Zukunft des Home-Workouts. Präzise. Motivierend. Sicher.</p>
     </section>
 
-    <main class="container">
+    <main class="container" id="main">
         <article class="glass-card">
             <img src="https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=500&q=80" 
                  alt="Vorschau der FitTrack App Oberfläche auf einem Tablet">
@@ -45,11 +52,18 @@
         </article>
     </main>
 
-    <footer>
-        <p>&copy; 2024 FitFlow Solutions OG | Wien</p>
-        <nav aria-label="Footer Navigation">
-            <a href="legal.html">Impressum</a> | <a href="accessibility.html">Barrierefreiheit</a>
-        </nav>
+    <footer role="contentinfo" class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">© <span id="year">2024</span> FitFlow Solutions OG — Wien</p>
+
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="legal.html">Impressum</a></li>
+                    <li><a href="accessibility.html">Barrierefreiheit</a></li>
+                    <li><a href="privacy.html">Datenschutz</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 
     <script src="script.js"></script>

@@ -1,20 +1,55 @@
 <!DOCTYPE html>
-<html lang="de">
-<head><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><title>Rechtliches</title></head>
+<html lang="de" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechtliches | FitTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <main class="container">
-        <div class="glass-card" style="text-align: left;">
+
+    <header role="banner">
+        <nav aria-label="Hauptnavigation">
+             <a class="skip-link" href="#main">Skip to content</a>
+
+            <div class="logo"><strong>FitTrack</strong></div>
+            <ul>
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="about.html">Marke</a></li>
+                <li><a href="license.html">Lizenzen</a></li>
+                <li><a href="legal.html" aria-current="page">Rechtliches</a></li>
+                <li><button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="container" role="main">
+        <article class="glass-card" style="text-align:left;">
             <h1>Impressum</h1>
             <p><strong>FitFlow Solutions OG</strong><br>
             Argentinierstraße 1, 1040 Wien<br>
             FN: 123456t (HG Wien)<br>
             WKO Fachgruppe UBIT<br>
-            E-Mail: office@fittrack.at</p>
+            E-Mail: <a href="mailto:office@fittrack.at">office@fittrack.at</a></p>
 
-            <h1>Datenschutzerklärung</h1>
+            <h2>Datenschutzerklärung</h2>
             <p>Rechtsgrundlage: Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
             <p>Wir speichern nur die für den Kaufabschluss notwendigen Daten (Datensparsamkeit).</p>
-        </div>
+        </article>
     </main>
+
+    <footer role="contentinfo" class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">© <span id="year">2024</span> FitFlow Solutions OG — Wien</p>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="accessibility.html">Barrierefreiheit</a></li>
+                    <li><a href="index.html">Zurück zum Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

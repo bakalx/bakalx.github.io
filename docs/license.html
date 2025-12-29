@@ -1,25 +1,63 @@
 <!DOCTYPE html>
-<html lang="de">
-<head><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><title>Lizenzen</title></head>
+<html lang="de" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizenzen | FitTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <header><h1>Lizenzen & Rechte</h1></header>
-    <main class="container">
-        <div class="glass-card" style="text-align: left;">
+
+    <header role="banner">
+        <nav aria-label="Hauptnavigation">
+            <a class="skip-link" href="#main">Skip to content</a>
+
+            <div class="logo"><strong>FitTrack</strong></div>
+            <ul>
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="about.html">Marke</a></li>
+                <li><a href="license.html" aria-current="page">Lizenzen</a></li>
+                <li><a href="legal.html">Rechtliches</a></li>
+                <li><button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="container" role="main">
+        <article class="glass-card" style="text-align:left;">
+            <h1>Lizenzen & Rechte</h1>
             <h2>Software-Nutzungsrecht (§ 40a UrhG)</h2>
             <p>FitTrack wird nicht verkauft, sondern es wird eine <strong>Werknutzungsbewilligung</strong> erteilt.</p>
             <ul>
                 <li><strong>Erlaubt:</strong> Installation auf privaten Endgeräten des Käufers.</li>
                 <li><strong>Untersagt:</strong> Vervielfältigung, Vermietung oder Reverse Engineering.</li>
             </ul>
+
             <h2>Mediennachweise</h2>
-            <table>
-                <thead><tr><th>Datei</th><th>Urheber</th><th>Lizenz</th></tr></thead>
-                <tbody>
-                    <tr><td>App-Vorschau</td><td>Unsplash User</td><td>Unsplash License</td></tr>
-                    <tr><td>Icons</td><td>FontAwesome</td><td>CC BY 4.0</td></tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead><tr><th>Datei</th><th>Urheber</th><th>Lizenz</th></tr></thead>
+                    <tbody>
+                        <tr><td>App-Vorschau</td><td>Unsplash User</td><td>Unsplash License</td></tr>
+                        <tr><td>Icons</td><td>FontAwesome</td><td>CC BY 4.0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
     </main>
+
+    <footer role="contentinfo" class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">© <span id="year">2024</span> FitFlow Solutions OG — Wien</p>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="legal.html">Impressum</a></li>
+                    <li><a href="index.html">Zurück zum Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

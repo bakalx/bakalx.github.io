@@ -1,43 +1,61 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="light">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marke | FitTrack</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <nav aria-label="Hauptnavigation">
+        <nav class="main-nav" aria-label="Hauptnavigation">
+            <a class="skip-link" href="#main">Skip to content</a>
+
+            <div class="logo"><strong>FitTrack</strong></div>
             <ul>
                 <li><a href="index.html">Shop</a></li>
-                <li><a href="about.html">Marke</a></li>
+                <li><a href="about.html" aria-current="page">Marke</a></li>
                 <li><a href="license.html">Lizenzen</a></li>
                 <li><a href="legal.html">Rechtliches</a></li>
-                <li>
-                    <button id="theme-toggle" aria-label="Farbschema umschalten">
-                        <span id="theme-icon">🌙</span>
-                    </button>
-                </li>
+                <li><button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false">🌙</button></li>
             </ul>
         </nav>
-        <h1>Unsere Identität</h1>
     </header>
-    <main>
-        <section>
-            <h2>Die Marke FitTrack</h2>
-            <p>Wir haben unsere Marke beim EUIPO recherchiert, um Verwechslungen auszuschließen.</p>
-            <ul>
-                <li><strong>Wortmarke:</strong> "FitTrack"</li>
-                <li><strong>Bildmarke:</strong> Ein stilisiertes "F", das wie eine Laufbahn geformt ist.</li>
-                <li><strong>Farbmarke:</strong> Unser "Power-Orange" (HEX #FF5722).</li>
-            </ul>
-            <h3>Nizza-Klassen</h3>
-            <p>Registriert für:</p>
-            <ul>
-                <li><strong>Klasse 9:</strong> Software für Fitness-Tracking.</li>
-                <li><strong>Klasse 41:</strong> Durchführung von Fitnesstraining und sportliche Aktivitäten.</li>
-            </ul>
-        </section>
+
+    <main id="main" class="container" role="main">
+        <article class="glass-card" style="text-align:left;">
+            <h1>Unsere Identität</h1>
+            <section>
+                <h2>Die Marke FitTrack</h2>
+                <p>Wir haben unsere Marke beim EUIPO recherchiert, um Verwechslungen auszuschließen.</p>
+                <ul>
+                    <li><strong>Wortmarke:</strong> "FitTrack"</li>
+                    <li><strong>Bildmarke:</strong> Ein stilisiertes "F"</li>
+                    <li><strong>Farbmarke:</strong> Power-Orange (HEX #FF5722)</li>
+                </ul>
+
+                <h3>Nizza-Klassen</h3>
+                <ul>
+                    <li><strong>Klasse 9:</strong> Software für Fitness-Tracking</li>
+                    <li><strong>Klasse 41:</strong> Durchführung von Fitnesstraining</li>
+                </ul>
+            </section>
+        </article>
     </main>
+
+    <footer role="contentinfo" class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">© <span id="year">2024</span> FitFlow Solutions OG — Wien</p>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="legal.html">Impressum</a></li>
+                    <li><a href="accessibility.html">Barrierefreiheit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -24,9 +24,9 @@
 
 [ ] Responsivität: Seite ist auf Mobilgeräten nutzbar und unterstützt 200% Zoom.
 
-[ ] Dark Mode: Implementiert als Unterstützung für situative Einschränkungen.
+[X] Dark Mode: Implementiert als Unterstützung für situative Einschränkungen.
 
-[ ] Erklärung: Seite accessibility.html mit Stand der Vereinbarkeit vorhanden.
+[X] Erklärung: Seite accessibility.html mit Stand der Vereinbarkeit vorhanden.
 
 ## ⚖️ Aufgabe 2: Urheberrecht & Medien
 
@@ -40,7 +40,7 @@
 
 ## 🏷️ Aufgabe 3: Marke & Branding
 
-[ ] Markenformen definiert:
+[X] Markenformen definiert:
 
 [ ] Wortmarke ("FitTrack").
 
@@ -48,17 +48,17 @@
 
 [ ] Farbmarke (Power-Orange #FF5722) oder Positionsmarke.
 
-[ ] Markenbedeutung: Erklärung der Identität auf der about.html.
+[X] Markenbedeutung: Erklärung der Identität auf der about.html.
 
-[ ] Nizza-Klassen: Korrekte Zuordnung zu Klasse 9 (Software) und Klasse 41 (Sporttraining).
+[X] Nizza-Klassen: Korrekte Zuordnung zu Klasse 9 (Software) und Klasse 41 (Sporttraining).
 
 [ ] Recherche-Vermerk: Hinweis auf Prüfung via TMview zur Vermeidung von Markenverletzungen.
 
 ## 📜 Aufgabe 4: Software-Lizenzierung
 
-[ ] Lizenz-Seite: Eigene Seite license.html erstellt.
+[X] Lizenz-Seite: Eigene Seite license.html erstellt.
 
-[ ] Rechtliche Basis: Einräumung einer Werknutzungsbewilligung (§ 40a UrhG).
+[X] Rechtliche Basis: Einräumung einer Werknutzungsbewilligung (§ 40a UrhG).
 
 [ ] Eigentumsvorbehalt: Hinweis, dass der Quellcode beim Unternehmen verbleibt.
 

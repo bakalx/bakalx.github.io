@@ -9,6 +9,15 @@
     --border: rgba(0, 0, 0, 0.1);
 }
 
+/* Make sizing predictable and prevent overflow caused by padding/borders */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Media elements should never exceed their container */
+img, picture, video, iframe, svg { max-width: 100%; height: auto; display: block; }
+
+/* Smooth scrolling on iOS */
+html { -webkit-overflow-scrolling: touch; }
+
 [data-theme="dark"] {
     --bg-main: #0f172a;
     --bg-card: rgba(30, 41, 59, 0.7);
@@ -87,7 +96,8 @@ nav a:focus, .buy-button:focus { outline: 3px solid var(--accent); outline-offse
     max-width: 1100px;
     margin: -4rem auto 4rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* allow narrower columns on small screens to avoid horizontal scrolling */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     padding: 0 1rem;
 }
@@ -184,4 +194,15 @@ nav a:focus, .buy-button:focus { outline: 3px solid var(--accent); outline-offse
 /* Small screens: stack footer elements */
 @media (max-width: 560px) {
     .site-footer .footer-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+}
+
+/* Navigation wrapping and compact layout for small viewports to avoid overflow */
+nav ul { flex-wrap: wrap; }
+@media (max-width: 560px) {
+    nav { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    nav ul { flex-direction: column; gap: 0.5rem; width: 100%; }
+    .main-nav a { padding: 8px 6px; }
+    .hero { padding: 4rem 1rem; }
+    /* Prevent horizontal scrolling on small devices */
+    body { overflow-x: hidden; }
 }

@@ -52,7 +52,7 @@
 
 [X] Nizza-Klassen: Korrekte Zuordnung zu Klasse 9 (Software) und Klasse 41 (Sporttraining).
 
-[ ] Recherche-Vermerk: Hinweis auf Prüfung via TMview zur Vermeidung von Markenverletzungen.
+[X] Recherche-Vermerk: Hinweis auf Prüfung via TMview zur Vermeidung von Markenverletzungen.
 
 ## 📜 Aufgabe 4: Software-Lizenzierung
 

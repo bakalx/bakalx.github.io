@@ -277,3 +277,33 @@ nav ul { flex-wrap: wrap; }
     /* Prevent horizontal scrolling on small devices */
     body { overflow-x: hidden; }
 }
+
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Abstand zwischen Icon und Text */
+    text-decoration: none;
+    color: var(--nav-text); /* Nutzt die Header-Textfarbe */
+}
+
+/* Das SVG Icon */
+.logo-icon {
+    /* 'currentColor' bedeutet, es nimmt die Textfarbe des Containers an */
+    /* Hier wird die Farbe hart auf dein Power-Orange gesetzt */
+    color: #FF5722;
+    transition: color 0.3s ease;
+}
+
+/* Der Markenname Text */
+.brand-name {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* WICHTIG: Im Dark Mode soll das Logo hell sein, nicht orange, für besseren Kontrast */
+[data-theme="dark"] .logo-icon {
+    color: #FF5722;
+}

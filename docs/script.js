@@ -5,14 +5,36 @@ btn.addEventListener('click', () => {
     const isDark = html.getAttribute('data-theme') === 'dark';
     const nextTheme = isDark ? 'light' : 'dark';
     html.setAttribute('data-theme', nextTheme);
-    btn.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+    if (btn) btn.setAttribute('aria-pressed', nextTheme === 'dark' ? 'true' : 'false');
+    // Update the icon to reflect the new theme: moon in light mode, sun in dark mode
+    const icon = btn.querySelector('.theme-icon');
+    if (icon) {
+        if (nextTheme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    }
     localStorage.setItem('theme', nextTheme);
 });
 
 // Check gespeichertes Theme
 if (localStorage.getItem('theme') === 'dark') {
     html.setAttribute('data-theme', 'dark');
-    btn.textContent = '☀️';
+    if (btn) btn.setAttribute('aria-pressed', 'true');
+    // Set initial icon state
+    if (btn) {
+        const icon = btn.querySelector('.theme-icon');
+        if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+    }
+} else {
+    if (btn) btn.setAttribute('aria-pressed', 'false');
+    if (btn) {
+        const icon = btn.querySelector('.theme-icon');
+        if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+    }
 }
 
 // ensure footer shows current year

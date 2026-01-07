@@ -9,6 +9,10 @@
     --border: rgba(0, 0, 0, 0.1);
 }
 
+.table-wrapper {
+    margin-top: 1rem;
+}
+
 /* Make sizing predictable and prevent overflow caused by padding/borders */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -29,7 +33,7 @@ html { -webkit-overflow-scrolling: touch; }
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-primary);
     margin: 0;
@@ -41,6 +45,17 @@ html { font-size: 16px; }
 
 /* Prevent iOS text-size-adjust from altering scaling behaviour on orientation changes */
 body { -webkit-text-size-adjust: 100%; }
+
+/* Theme toggle icon (single element swapped by JS) */
+.theme-icon { display: inline-block; }
+
+/* Utility: visually hidden for screen readers */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
 
 header {
     background: var(--nav-bg);
@@ -54,6 +69,10 @@ header {
 nav { display: flex; justify-content: space-around; align-items: center; max-width: 1200px; margin: 0 auto; }
 nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
 .main-nav a { color: var(--nav-text); text-decoration: none; font-weight: bold; padding: 10px; border-radius: 8px; }
+
+/* Logo alignment and icon sizing */
+.logo { display: flex; align-items: center; gap: 0.5rem; }
+.logo i { font-size: 1.05rem; color: inherit; }
 
 /* Ensure navigation and footer links retain the nav text color in all themes */
 .footer-nav a { color: #ffffff; /* keep footer links white regardless of theme */ }
@@ -84,6 +103,44 @@ nav a:focus, .buy-button:focus { outline: 3px solid var(--accent); outline-offse
     border-radius: 8px;
 }
 
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(12,16,22,0.06);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 360px;
+}
+.table-wrapper caption {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.table-wrapper thead th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgba(26,35,126,0.06), rgba(63,81,181,0.04));
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.table-wrapper tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.table-wrapper tbody tr:nth-child(even) {
+    background: rgba(0,0,0,0.02);
+}
+.table-wrapper tbody tr:hover {
+    background: rgba(0,0,0,0.03);
+}
+@media (max-width: 560px) {
+    .table-wrapper table { min-width: 280px; }
+}
 .hero {
     text-align: center;
     padding: 6rem 1rem;
@@ -110,6 +167,20 @@ nav a:focus, .buy-button:focus { outline: 3px solid var(--accent); outline-offse
     padding: 2.5rem;
     text-align: center;
     box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Product preview image sizing */
+.glass-card .product-preview {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 100%;
+    max-width: 460px; /* keeps it from being too large on wide screens */
+    height: auto;
+    border-radius: 12px;
+}
+
+@media (max-width: 560px) {
+    .glass-card .product-preview { max-width: 100%; }
 }
 
 .price-tag { font-size: 2rem; color: var(--accent); font-weight: 800; display: block; margin: 1rem; }

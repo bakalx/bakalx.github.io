@@ -1,16 +1,16 @@
-# 📝 FitTrack Projekt-Checkliste
+# 📝 BakFit Projekt-Checkliste
 
 ---
 
 ## 📁 Aufgabe 0: Startup & Produktkonzept
 
-[X] Softwareprodukt definiert: FitTrack AI (KI-gestützter Home-Workout-Planer).
+[X] Softwareprodukt definiert: BakFit AI (KI-gestützter Home-Workout-Planer).
 
 [X] Funktionen beschrieben: Personalisierte Pläne, Fortschrittsanalyse, Übungsdatenbank.
 
 [X] Zielgruppe festgelegt: Home-Office-Nutzer, Studierende, Fitness-Einsteiger.
 
-[X] Unternehmensdaten: FitFlow Solutions OG, Standort: Wien, 3 Mitarbeiter.
+[X] Unternehmensdaten: BakFlow Solutions OG, Standort: Wien, 3 Mitarbeiter.
 
 [X] Geschäftsmodell: Einmalverkauf (Lifetime-Lizenz) für 29,99 €.
 
@@ -20,9 +20,9 @@
 
 [X] Tastaturbedienung: Alle Elemente per Tab erreichbar; Fokus-Rahmen deutlich sichtbar.
 
-[ ] Alt-Texte: Jedes Bild verfügt über ein aussagekräftiges alt-Attribut.
+[X] Alt-Texte: Jedes Bild verfügt über ein aussagekräftiges alt-Attribut.
 
-[ ] Responsivität: Seite ist auf Mobilgeräten nutzbar und unterstützt 200% Zoom.
+[X] Responsivität: Seite ist auf Mobilgeräten nutzbar und unterstützt 200% Zoom.
 
 [X] Dark Mode: Implementiert als Unterstützung für situative Einschränkungen.
 
@@ -32,17 +32,17 @@
 
 [ ] Medien-Mix: Integration von Bildern (Workout), Icons (SVG), Sounds (Pling) und Webfonts.
 
-[ ] Lizenz-Tabelle: Dokumentation auf license.html (Urheber, Quelle, Lizenztyp).
+[X] Lizenz-Tabelle: Dokumentation auf license.html (Urheber, Quelle, Lizenztyp).
 
-[ ] Rechte-Check: Alle Medien nutzen freie Lizenzen (z. B. Unsplash, CC BY, CC0).
+[X] Rechte-Check: Alle Medien nutzen freie Lizenzen (z. B. Unsplash, CC BY, CC0).
 
-[ ] Namensnennung: Urheberangaben erfolgen gemäß den Lizenzbedingungen.
+[X] Namensnennung: Urheberangaben erfolgen gemäß den Lizenzbedingungen.
 
 ## 🏷️ Aufgabe 3: Marke & Branding
 
 [X] Markenformen definiert:
 
-[ ] Wortmarke ("FitTrack").
+[X] Wortmarke ("BakFit").
 
 [ ] Bildmarke (Stilisiertes "F"-Logo).
 
@@ -92,8 +92,8 @@
 
 # 🛠️ Technische Umsetzung & Abgabe
 
-[ ] Hosting: Webshop ist via GitHub Pages öffentlich erreichbar.
+[X] Hosting: Webshop ist via GitHub Pages öffentlich erreichbar.
 
-[ ] Navigation: Alle internen Links funktionieren (Header & Footer).
+[ ] Navigation: Alle internen Links funktionieren (Header & Footer). (Datenschutz)
 
-[ ] Theme-Toggle: Wechsel zwischen Light/Dark Mode speichert Präferenz im localStorage.
+[X] Theme-Toggle: Wechsel zwischen Light/Dark Mode speichert Präferenz im localStorage.

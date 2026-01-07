@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>FitTrack | Next Gen Fitness</title>
+    <title>BakFit | Next Gen Fitness</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -12,26 +13,31 @@
         <nav class="main-nav" aria-label="Hauptnavigation">
             <a class="skip-link" href="#main">Skip to content</a>
 
-            <div class="logo"><strong>FitTrack</strong></div>
+            <div class="logo"><strong>BakFit</strong></div>
             <ul>
                 <li><a href="index.html" aria-current="page">Shop</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="license.html">Lizenzen</a></li>
                 <li><a href="legal.html">Rechtliches</a></li>
-                <li><button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false">🌙</button></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false">
+                        <i class="fa-solid theme-icon" aria-hidden="true"></i>
+                        <span class="visually-hidden">Farbschema umschalten</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>FitTrack AI</h1>
+        <h1>BakFit AI</h1>
         <p>Die Zukunft des Home-Workouts. Präzise. Motivierend. Sicher.</p>
     </section>
 
     <main class="container" id="main">
         <article class="glass-card">
-            <img src="https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=500&q=80" 
-                 alt="Vorschau der FitTrack App Oberfläche auf einem Tablet">
+              <img class="product-preview" src="../assets/premium-lifetime.jpg"
+                  alt="Person der gleich eine Langhantel hebt.">
             <h2>Premium Lifetime</h2>
             <p>Einmal kaufen, für immer fit bleiben. Inklusive aller KI-Pläne.</p>
             <span class="price-tag">€ 29,99</span>
@@ -41,7 +47,7 @@
 
     <footer role="contentinfo" class="site-footer">
         <div class="container footer-inner">
-            <p class="footer-copy">© <span id="year">2026</span> FitFlow Solutions OG — Wien</p>
+            <p class="footer-copy">© <span id="year">2026</span> BakFlow Solutions OG — Wien</p>
 
             <nav class="footer-nav" aria-label="Footer Navigation">
                 <ul>

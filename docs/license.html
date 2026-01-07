@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Lizenzen | FitTrack</title>
+    <title>Lizenzen | BakFit</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -12,13 +13,18 @@
         <nav class="main-nav" aria-label="Hauptnavigation">
             <a class="skip-link" href="#main">Skip to content</a>
 
-            <div class="logo"><strong>FitTrack</strong></div>
+            <div class="logo"><strong>BakFit</strong></div>
             <ul>
                 <li><a href="index.html">Shop</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="license.html" aria-current="page">Lizenzen</a></li>
                 <li><a href="legal.html">Rechtliches</a></li>
-                <li><button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false">🌙</button></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false">
+                        <i class="fa-solid theme-icon" aria-hidden="true"></i>
+                        <span class="visually-hidden">Farbschema umschalten</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -30,7 +36,7 @@
     <main id="main" class="container" role="main">
         <article class="glass-card" style="text-align:left;">
             <h2>Software-Nutzungsrecht (§ 40a UrhG)</h2>
-            <p>FitTrack wird nicht verkauft, sondern es wird eine <strong>Werknutzungsbewilligung</strong> erteilt.</p>
+            <p>BakFit wird nicht verkauft, sondern es wird eine <strong>Werknutzungsbewilligung</strong> erteilt.</p>
             <ul>
                 <li><strong>Erlaubt:</strong> Installation auf privaten Endgeräten des Käufers.</li>
                 <li><strong>Untersagt:</strong> Vervielfältigung, Vermietung oder Reverse Engineering.</li>
@@ -38,11 +44,36 @@
 
             <h2>Mediennachweise</h2>
             <div class="table-wrapper">
-                <table>
-                    <thead><tr><th>Datei</th><th>Urheber</th><th>Lizenz</th></tr></thead>
+                <table aria-describedby="mediennachweise-desc">
+                    <caption id="mediennachweise-desc">Mediennachweise und Lizenzinformationen</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Datei</th>
+                            <th scope="col">Urheber</th>
+                            <th scope="col">Lizenz</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>App-Vorschau</td><td>Unsplash User</td><td>Unsplash License</td></tr>
-                        <tr><td>Icons</td><td>FontAwesome</td><td>CC BY 4.0</td></tr>
+                        <tr>
+                            <td><a href="https://unsplash.com/photos/person-about-to-lift-the-barbel-WvDYdXDzkhs?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">person about to lift the barbel</a></td>
+                            <td>Victor Freitas</td>
+                            <td>Unsplash License</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://fonts.google.com/specimen/Inter">Inter Font</a></td>
+                            <td>Rasmus Andersson</td>
+                            <td>SIL OFL 1.1 (Fonts)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://fontawesome.com">Icons & Webfont (FontAwesome Free)</a></td>
+                            <td>Fonticons, Inc.</td>
+                            <td>CC BY 4.0 (Icons) / SIL OFL 1.1 (Fonts)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">FontAwesome CSS (Code-Library)</a></td>
+                            <td>Fonticons, Inc.</td>
+                            <td>MIT License</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -51,7 +82,7 @@
 
     <footer role="contentinfo" class="site-footer">
         <div class="container footer-inner">
-            <p class="footer-copy">© <span id="year">2026</span> FitFlow Solutions OG — Wien</p>
+            <p class="footer-copy">© <span id="year">2026</span> BakFlow Solutions OG — Wien</p>
             <nav class="footer-nav" aria-label="Footer Navigation">
                 <ul>
                     <li><a href="legal.html">Impressum</a></li>

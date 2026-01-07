@@ -44,9 +44,9 @@
 
 [X] Wortmarke ("BakFit").
 
-[ ] Bildmarke (Stilisiertes "F"-Logo).
+[X] Bildmarke (Stilisiertes "F"-Logo).
 
-[ ] Farbmarke (Power-Orange #FF5722) oder Positionsmarke.
+[X] Farbmarke (Power-Orange #FF5722) oder Positionsmarke.
 
 [X] Markenbedeutung: Erklärung der Identität auf der about.html.
 
@@ -60,33 +60,33 @@
 
 [X] Rechtliche Basis: Einräumung einer Werknutzungsbewilligung (§ 40a UrhG).
 
-[ ] Eigentumsvorbehalt: Hinweis, dass der Quellcode beim Unternehmen verbleibt.
+[X] Eigentumsvorbehalt: Hinweis, dass der Quellcode beim Unternehmen verbleibt.
 
-[ ] Haftungsbeschränkung: Spezifischer Ausschluss für Sportverletzungen und Datenverlust.
+[X] Haftungsbeschränkung: Spezifischer Ausschluss für Sportverletzungen und Datenverlust.
 
 ## 🔒 Aufgabe 5: Datenschutz (DSGVO)
 
-[ ] Datenschutzerklärung: In legal.html integriert.
+[X] Datenschutzerklärung: In legal.html integriert.
 
-[ ] Rechtsgrundlage: Verweis auf Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).
+[X] Rechtsgrundlage: Verweis auf Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).
 
-[ ] Betroffenenrechte: Informationen zu Auskunft, Löschung und Widerruf enthalten.
+[X] Betroffenenrechte: Informationen zu Auskunft, Löschung und Widerruf enthalten.
 
-[ ] Transparenz: Mock-Prozesse (Cookies, Kontaktformular) verständlich erläutert.
+[X] Transparenz: Mock-Prozesse (Cookies, Kontaktformular) verständlich erläutert.
 
 ## 🏢 Aufgabe 6: Gewerbe & Impressum (Österreich)
 
-[ ] Impressum: Erfüllt Pflichten nach § 5 ECG und § 24 Mediengesetz.
+[X] Impressum: Erfüllt Pflichten nach § 5 ECG und § 24 Mediengesetz.
 
-[ ] Pflichtinhalte: - [ ] Name & Anschrift (Wien).
+[X] Pflichtinhalte: - [X] Name & Anschrift (Wien).
 
-[ ] Firmenbuchnummer & Gericht.
+[X] Firmenbuchnummer & Gericht.
 
-[ ] UID-Nummer.
+[X] UID-Nummer.
 
-[ ] Kammerzugehörigkeit (WKO Wien, Fachgruppe UBIT).
+[X] Kammerzugehörigkeit (WKO Wien, Fachgruppe UBIT).
 
-[ ] Kontakt: E-Mail-Adresse und Kontaktseite sind leicht auffindbar.
+[X] Kontakt: E-Mail-Adresse und Kontaktseite sind leicht auffindbar.
 
 ---
 
@@ -94,6 +94,6 @@
 
 [X] Hosting: Webshop ist via GitHub Pages öffentlich erreichbar.
 
-[ ] Navigation: Alle internen Links funktionieren (Header & Footer). (Datenschutz)
+[X] Navigation: Alle internen Links funktionieren (Header & Footer). (Datenschutz)
 
 [X] Theme-Toggle: Wechsel zwischen Light/Dark Mode speichert Präferenz im localStorage.

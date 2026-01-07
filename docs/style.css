@@ -278,6 +278,40 @@ nav ul { flex-wrap: wrap; }
     body { overflow-x: hidden; }
 }
 
+/* Contact form styles */
+.contact-form { display: block; margin-top: 1rem; }
+.contact-form .form-row { margin-bottom: 1rem; display: flex; flex-direction: column; }
+.contact-form label { font-weight: 600; margin-bottom: 0.35rem; }
+.form-control { padding: 0.6rem 0.75rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); font-size: 1rem; }
+.form-control:focus { outline: 3px solid rgba(191,54,12,0.12); outline-offset: 2px; }
+.form-consent { flex-direction: row; align-items: center; gap: 0.5rem; }
+
+/* Ensure checkbox and its label sit on the same baseline and are vertically centered */
+.contact-form .form-row.form-consent {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+}
+.contact-form .form-row.form-consent input[type="checkbox"] {
+    margin: 0; /* remove default margins that can shift vertical alignment */
+    width: 1.05em;
+    height: 1.05em;
+    flex: 0 0 auto;
+    vertical-align: middle;
+}
+.contact-form .form-row.form-consent label {
+    margin: 0; /* ensure label doesn't add extra offset */
+}
+.form-actions { display: flex; gap: 0.75rem; align-items: center; }
+.form-actions .secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
+.contact-result { margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 8px; display: none; }
+.contact-result.success { background: rgba(16,185,129,0.12); color: #064e3b; display: block; }
+.contact-result.error { background: rgba(239,68,68,0.08); color: #7f1d1d; display: block; }
+
+@media (max-width: 560px) {
+    .form-actions { flex-direction: column; align-items: stretch; }
+}
+
 
 /* Logo Container */
 .logo-container {

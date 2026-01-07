@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Marke | BakFit</title>
+    <title>Kontakt | BakFit</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -24,10 +24,10 @@
 
             <ul>
                 <li><a href="index.html">Shop</a></li>
-                <li><a href="about.html" aria-current="page">About us</a></li>
+                <li><a href="about.html">About us</a></li>
                 <li><a href="license.html">Lizenz</a></li>
                 <li><a href="legal.html">Impressum</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="contact.html" aria-current="page">Kontakt</a></li>
                 <li>
                     <button id="theme-toggle" aria-label="Farbschema umschalten" aria-pressed="false">
                         <i class="fa-solid theme-icon" aria-hidden="true"></i>
@@ -37,43 +37,62 @@
             </ul>
         </nav>
     </header>
-    
+
     <section class="hero">
-        <h1>Unsere Identität</h1>
+        <h1>Kontakt</h1>
+        <p>Schreibe uns bei Fragen, Feedback oder Support-Anfragen.</p>
     </section>
 
     <main id="main" class="container" role="main">
         <article class="glass-card" style="text-align:left;">
-            <section>
-                <h2>Die Marke BakFit</h2>
-                <p>Wir haben unsere Marke beim EUIPO recherchiert, um Verwechslungen auszuschließen.</p>
-                <ul>
-                    <li>
-                        <strong>Wortmarke: "BakFit"</strong><br>
-                        Der Name kombiniert Dynamik und Beständigkeit. Er ist einprägsam und wurde bewusst kurz gehalten, um die Wiedererkennung im digitalen Umfeld zu maximieren.
-                    </li>
-                    <li>
-                        <strong>Bildmarke: Das dynamische "F"</strong><br>
-                        Unser Logo besteht aus einem stilisierten Buchstaben "F", dessen Linienführung an eine Laufbahn erinnert. Es symbolisiert Fortschritt, Bewegung und die Zielstrebigkeit unserer Nutzer.
-                    </li>
-                    <li>
-                        <strong>Farbmarke: Power-Orange (#FF5722)</strong><br>
-                        Wir beanspruchen "Power-Orange" als unsere primäre Markenfarbe. In der Farbpsychologie steht Orange für Energie, Vitalität und Optimismus – exakt die Werte, die BakFit vermittelt.
-                    </li>
-                </ul>
-                <h3>Nizza-Klassen</h3>
-                <p>Gemäß dem Abkommen von Nizza haben wir unsere Marke für folgende Klassen registriert, um den gesamten Funktionsumfang unserer Anwendung abzusichern:</p>
-                <ul>
-                    <li><strong>Klasse 9:</strong> Software für Fitness-Tracking, herunterladbare Applikationen und KI-gestützte Trainingsalgorithmen.</li>
-                    <li><strong>Klasse 41:</strong> Durchführung von Fitnesstraining, Bereitstellung von Online-Trainingsanleitungen und sportliche Aktivitäten.</li>
-                </ul>
-            </section>
+            <h2>Kontaktformular (Mock)</h2>
+
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required class="form-control" placeholder="Max Mustermann">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">E-Mail</label>
+                    <input id="email" name="email" type="email" required class="form-control" placeholder="name@domain.tld">
+                </div>
+
+                <div class="form-row">
+                    <label for="subject">Betreff</label>
+                    <select id="subject" name="subject" class="form-control">
+                        <option value="allgemein">Allgemein</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="press">Presse</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="6" required class="form-control" placeholder="Deine Nachricht..."></textarea>
+                </div>
+
+                <div class="form-row form-consent">
+                    <input id="consent" name="consent" type="checkbox" required>
+                    <label for="consent">Ich stimme zu, dass meine Angaben elektronisch verarbeitet werden.</label>
+                </div>
+
+                <div class="form-row form-actions">
+                    <button type="submit" class="buy-button">Absenden</button>
+                    <button type="reset" class="buy-button secondary">Zurücksetzen</button>
+                </div>
+
+                <div id="contact-result" class="contact-result" role="status" aria-live="polite" hidden></div>
+            </form>
+
         </article>
     </main>
 
     <footer role="contentinfo" class="site-footer">
         <div class="container footer-inner">
             <p class="footer-copy">© <span id="year">2026</span> BakFlow Solutions OG — Wien</p>
+
             <nav class="footer-nav" aria-label="Footer Navigation">
                 <ul>
                     <li><a href="legal.html">Impressum</a></li>

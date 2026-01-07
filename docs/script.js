@@ -58,3 +58,96 @@ if (localStorage.getItem('theme') === 'dark') {
         });
     });
 })();
+
+// Mock contact form submission
+(function () {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    const result = document.getElementById('contact-result');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!form.reportValidity()) {
+            return;
+        }
+
+        // Mock sending
+        if (result) {
+            result.className = 'contact-result';
+            result.textContent = 'Senden...';
+            result.hidden = false;
+            result.style.display = 'block';
+        }
+
+        setTimeout(() => {
+            if (result) {
+                result.classList.add('success');
+                result.textContent = 'Danke! Deine Nachricht wurde (mock) gesendet.';
+                result.focus();
+            }
+            form.reset();
+        }, 900);
+    });
+})();
+
+/* Play a short click sound for primary actions (buy buttons) */
+(function () {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    let ctx = null;
+
+    function ensureCtx() {
+        if (!AudioCtx) return null;
+        if (!ctx) ctx = new AudioCtx();
+        if (ctx.state === 'suspended') {
+            ctx.resume().catch(() => {});
+        }
+        return ctx;
+    }
+
+    function playClick() {
+        const c = ensureCtx();
+        if (!c) return;
+        const now = c.currentTime;
+
+        // Create a bright, happy ping using two sine oscillators (major interval)
+        const osc1 = c.createOscillator();
+        const osc2 = c.createOscillator();
+        const gain = c.createGain();
+        const filter = c.createBiquadFilter();
+
+        osc1.type = 'sine';
+        osc2.type = 'sine';
+
+        // Base and a major third above for a cheerful interval
+        osc1.frequency.value = 880; // A5
+        osc2.frequency.value = 1108.73; // C#6 (~major third above A5)
+
+        filter.type = 'highpass';
+        filter.frequency.value = 360; // keep it bright
+
+        gain.gain.value = 0.0001;
+
+        osc1.connect(filter);
+        osc2.connect(filter);
+        filter.connect(gain);
+        gain.connect(c.destination);
+
+        // Fast attack, pleasant decay
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(0.22, now + 0.006);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.36);
+
+        osc1.start(now);
+        // slight stagger for shimmer
+        osc2.start(now + 0.01);
+        osc1.stop(now + 0.37);
+        osc2.stop(now + 0.37);
+    }
+
+    document.querySelectorAll('.buy-button').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            try { playClick(); } catch (err) { /* ignore audio errors */ }
+        });
+    });
+})();

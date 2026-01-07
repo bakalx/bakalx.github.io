@@ -145,9 +145,50 @@ if (localStorage.getItem('theme') === 'dark') {
         osc2.stop(now + 0.37);
     }
 
-    document.querySelectorAll('.buy-button').forEach(btn => {
+    // Only attach sound + popup to explicit purchase buttons: add data-action="buy" to the element
+    document.querySelectorAll('.buy-button[data-action="buy"]').forEach(btn => {
         btn.addEventListener('click', function (e) {
             try { playClick(); } catch (err) { /* ignore audio errors */ }
+            // Show a simple accessible toast popup (auto-dismiss)
+            try { showSimplePopup('Danke! Deine Lizenz wurde (mock) erstellt.'); } catch (err) {}
         });
     });
+})();
+
+// Simple toast popup utility
+(function () {
+    let popup = null;
+    let hideTimer = null;
+
+    function createPopup() {
+        if (popup) return popup;
+        popup = document.createElement('div');
+        popup.className = 'simple-popup';
+        popup.setAttribute('role', 'status');
+        popup.setAttribute('aria-live', 'polite');
+        popup.innerHTML = '<div class="popup-message"></div><button class="popup-close" aria-label="Schließen">✕</button>';
+        document.body.appendChild(popup);
+
+        const btn = popup.querySelector('.popup-close');
+        btn.addEventListener('click', hidePopup);
+        return popup;
+    }
+
+    function showSimplePopup(message, timeout = 3000) {
+        const p = createPopup();
+        const msg = p.querySelector('.popup-message');
+        msg.textContent = message;
+        p.classList.add('show');
+        if (hideTimer) clearTimeout(hideTimer);
+        hideTimer = setTimeout(hidePopup, timeout);
+    }
+
+    function hidePopup() {
+        if (!popup) return;
+        popup.classList.remove('show');
+        if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    }
+
+    window.showSimplePopup = showSimplePopup;
+    window.hideSimplePopup = hidePopup;
 })();

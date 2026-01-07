@@ -312,6 +312,42 @@ nav ul { flex-wrap: wrap; }
     .form-actions { flex-direction: column; align-items: stretch; }
 }
 
+/* Simple toast-style popup (accessible, auto-dismiss) */
+.simple-popup {
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%) translateY(8px);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.12);
+    border: 1px solid var(--border);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    min-width: 240px;
+    max-width: calc(100% - 2rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+}
+.simple-popup.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+.simple-popup .popup-message { flex: 1; }
+.simple-popup .popup-close {
+    background: transparent; border: none; color: var(--text-primary); cursor: pointer; padding: 0.25rem; border-radius: 6px;
+}
+.simple-popup .popup-close:focus { outline: 3px solid var(--accent); }
+
+@media (max-width: 420px) {
+    .simple-popup { bottom: 1rem; left: 50%; }
+}
+
 
 /* Logo Container */
 .logo-container {

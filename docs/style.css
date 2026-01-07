@@ -2,7 +2,8 @@
     --bg-main: #f0f2f5;
     --bg-card: rgba(255, 255, 255, 0.8);
     --text-primary: #1c1e21;
-    --accent: #ff5722;
+    /* Adjusted darker accent to ensure >= 4.5:1 contrast with white text on buttons/controls */
+    --accent: #bf360c; /* darker variant */
     --nav-bg: #1a237e;
     --nav-text: #ffffff;
     --border: rgba(0, 0, 0, 0.1);
@@ -12,6 +13,8 @@
     --bg-main: #0f172a;
     --bg-card: rgba(30, 41, 59, 0.7);
     --text-primary: #f1f5f9;
+    /* Link color for dark mode: chosen for contrast and vibrancy */
+    --link: #60a5fa;
     --nav-bg: #020617;
     --border: rgba(255, 255, 255, 0.1);
 }
@@ -24,6 +27,12 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Base font sizing to ensure predictable scaling at browser zoom levels (200% tested) */
+html { font-size: 16px; }
+
+/* Prevent iOS text-size-adjust from altering scaling behaviour on orientation changes */
+body { -webkit-text-size-adjust: 100%; }
+
 header {
     background: var(--nav-bg);
     color: var(--nav-text);
@@ -35,13 +44,33 @@ header {
 
 nav { display: flex; justify-content: space-around; align-items: center; max-width: 1200px; margin: 0 auto; }
 nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
-nav a { color: white; text-decoration: none; font-weight: bold; padding: 10px; border-radius: 8px; }
+.main-nav a { color: var(--nav-text); text-decoration: none; font-weight: bold; padding: 10px; border-radius: 8px; }
+
+/* Ensure navigation and footer links retain the nav text color in all themes */
+.footer-nav a { color: #ffffff; /* keep footer links white regardless of theme */ }
+
+/* Explicitly protect nav/footer link colors in dark mode so content link rules don't override them */
+[data-theme="dark"] .main-nav a { color: var(--nav-text); }
+[data-theme="dark"] .footer-nav a { color: #ffffff; }
+
+/* Dark mode link color for content links only — do not alter navigation links */
+[data-theme="dark"] main a,
+[data-theme="dark"] .container a,
+[data-theme="dark"] .glass-card a,
+[data-theme="dark"] article a,
+[data-theme="dark"] .hero a { color: var(--link); }
+
+/* Ensure content links keep readable contrast and visual focus */
+[data-theme="dark"] main a:focus,
+[data-theme="dark"] main a:hover,
+[data-theme="dark"] .container a:focus,
+[data-theme="dark"] .container a:hover { text-decoration: underline; }
 
 /* Fokus für Barrierefreiheit */
 nav a:focus, .buy-button:focus { outline: 3px solid var(--accent); outline-offset: 4px; }
 
 .main-nav:focus {
-    outline: 3px solid rgba(255,87,34,0.18);
+    outline: 3px solid rgba(191,54,12,0.18); /* uses darker accent with translucency */
     outline-offset: 4px;
     border-radius: 8px;
 }
@@ -148,7 +177,7 @@ nav a:focus, .buy-button:focus { outline: 3px solid var(--accent); outline-offse
 .skip-link:focus {
     left: 1rem;
     top: 1rem;
-    outline: 3px solid rgba(255,87,34,0.18);
+    outline: 3px solid rgba(191,54,12,0.18);
     transform: none;
 }
 

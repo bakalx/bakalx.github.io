@@ -2,14 +2,14 @@
 <html lang="de" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Barrierefreiheit | FitTrack</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header role="banner">
-        <nav aria-label="Hauptnavigation">
+    <header>
+        <nav class="main-nav" aria-label="Hauptnavigation">
             <a class="skip-link" href="#main">Skip to content</a>
             
             <div class="logo"><strong>FitTrack</strong></div>   
@@ -63,6 +63,15 @@
                 <li>axe DevTools</li>
                 <li>Manuelle Tests (Tastatur, Screenreader)</li>
             </ul>
+
+            <h2>Responsivität &amp; Zoom-Unterstützung</h2>
+            <p>Die Website ist für mobile Geräte optimiert und unterstützt Browser-Zoom bis mindestens <strong>200%</strong> ohne Layoutverlust oder abgeschnittene Inhalte. Getestet wurde auf:</p>
+            <ul>
+                <li>Android (Chrome, aktuelle Version) — Pinch-to-zoom auf 200%</li>
+                <li>iOS (Safari, aktuelle Version) — Pinch-to-zoom und Zoom-Einstellungen</li>
+                <li>Desktop (Chrome, Firefox) — Browser-Zoom auf 200%</li>
+            </ul>
+            <p>Hinweise zur Reproduktion: Öffnen Sie die Seite auf einem mobilen Gerät und führen Sie einen Pinch-to-zoom auf 200% durch oder setzen Sie den Browserzoom auf 200%. Das Layout nutzt flexible Einheiten und Grid-Minima, sodass Inhalte lesbar bleiben und Interaktionsziele (Buttons, Links, Formulare) erreichbar bleiben. Die Seite verwendet ein offenes Viewport-Setup (<code>viewport-fit=cover</code>) und schränkt Zoom nicht ein.</p>
 
             <h2>Feedback</h2>
             <p>Barrieren melden an: <a href="mailto:accessibility@fittrack.at">accessibility@fittrack.at</a></p>

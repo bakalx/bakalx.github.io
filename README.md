@@ -16,9 +16,9 @@
 
 ## ♿ Aufgabe 1: Digitale Barrierefreiheit (WCAG 2.2 AA)
 
-[ ] Farbkontraste: Mindestens 4,5:1 für Texte (geprüft mit Contrast Checker).
+[X] Farbkontraste: Mindestens 4,5:1 für Texte (geprüft mit Contrast Checker).
 
-[ ] Tastaturbedienung: Alle Elemente per Tab erreichbar; Fokus-Rahmen deutlich sichtbar.
+[X] Tastaturbedienung: Alle Elemente per Tab erreichbar; Fokus-Rahmen deutlich sichtbar.
 
 [ ] Alt-Texte: Jedes Bild verfügt über ein aussagekräftiges alt-Attribut.
 
